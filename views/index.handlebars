@@ -6,10 +6,10 @@
     {{#each burgers}}
     {{#unless devoured}}
     <li>
-        {{this.name}}
+        {{this.burger_name}}
 
-        <form action="/api/burgers/{{this.id}}" method="DELETE">
-            <input type="hidden" name="id" value="{{this.id}}">
+        <form action="/api/burgers/{{this.burger_name}}" method="GET">
+            <input type="hidden" name="burger_name" value="{{burger_name}}">
             <button type="submit">Eat that burger!</button>
         </form>
 
