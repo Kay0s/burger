@@ -1,5 +1,5 @@
 // Import MySQL connection.
-const { connection } = require("./db/connection");
+let connection = require("../config/connection.js");
 
 let orm = {
   all: function (tableInput, cb) {
@@ -67,4 +67,4 @@ let orm = {
 };
 
 // Export the orm object
-module.exports = { orm };
+module.exports = orm;

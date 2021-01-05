@@ -8,12 +8,11 @@
     <li>
         {{this.name}}
 
-        <form action="/{{this.id}}?_method=PUT" method="POST">
-            <input type="hidden" name="devoured" value="true">
-            <button type="submit">NAME THAT BURGER!</button>
+        <form action="/api/burgers/{{this.id}}" method="DELETE">
+            <input type="hidden" name="id" value="{{this.id}}">
+            <button type="submit">Eat that burger!</button>
         </form>
 
-        {{> burgers/delete-burger}}
     </li>
     {{/unless}}
     {{/each}}
@@ -29,12 +28,10 @@
     <li>
         {{this.name}}
 
-        <form action="/{{this.id}}?_method=PUT" method="POST">
+        <form action="/api/burgers/{{this.id}}/" method="DELETE">
             <input type="hidden" name="devoured" value="false">
             <button type="submit">Eat that burger!</button>
         </form>
-
-        {{> burgers/burger-block devoured=false}}
     </li>
     {{/if}}
     {{/each}}
