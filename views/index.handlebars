@@ -6,7 +6,7 @@
     {{#each burgers}}
     {{#unless devoured}}
     {{> burgers/burger-block devoured=true}}
-    </li>
+
     {{/unless}}
     {{/each}}
 
@@ -19,42 +19,37 @@
         <input type="hidden" name="burger_name" value="{{burger_name}}">
         <button type="submit">Eat that burger!</button>
     </form>
+</li>
 
 
 
 
+<h2> Burgers that are devoured!</h2>
 
-    <h2> Burgers that are devoured!</h2>
-
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block devoured=false}}
-        {{/if}}
-        {{/each}}
-    </ul>
-<li>
-    {{this.burger_name}}
-
-    <form action="/api/burgers/{{this.id}}/" method="DELETE">
-        <input type="hidden" name="devoured" value="false">
-        <button type="submit">Eat that burger!</button>
-    </form>
+<ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burgers/burger-block devoured=false}}
+    {{/if}}
+    {{/each}}
+</ul>
 
 
-    <h2>Add a Burger</h2>
-    <form class="create-update-form" action="/" method="POST">
 
-        <div class="form-group">
-            <label for="nb">Burger Name:</label>
-            <input type="text" id="nb" name="burger_name">
-        </div>
 
-        <div class="form-group">
-            <label for="dev">Devoured?</label><br>
-            <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-            <input type="radio" name="devoured" value="0"> Not Devoured
-        </div>
+<h2>Add a Burger</h2>
+<form class="create-update-form" action="/" method="POST">
 
-        <button type="submit">Add Burger</button>
-    </form>
+    <div class="form-group">
+        <label for="nb">Burger Name:</label>
+        <input type="text" id="nb" name="burger_name">
+    </div>
+
+    <div class="form-group">
+        <label for="dev">Devoured?</label><br>
+        <input type="radio" name="devoured" value="1" checked> Devoured!<br>
+        <input type="radio" name="devoured" value="0"> Not Devoured
+    </div>
+
+    <button type="submit">Add Burger</button>
+</form>
