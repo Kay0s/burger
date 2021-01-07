@@ -14,8 +14,8 @@ let burger = {
     });
   },
   // update a burger within the database
-  updateOne: function (objColVals, condition, cb) {
-    orm.updateOne("burgers", objColVals, condition, function (res) {
+  updateOne: function (objColVals, boolean, condition, cb) {
+    orm.updateOne("burgers", objColVals, boolean, condition, function (res) {
       cb(res);
     });
   },
