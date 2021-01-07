@@ -4,6 +4,10 @@ li {
     padding: 5px;
 }
 
+h2 {
+    color: rebeccapurple;
+}
+
 .label {
     font-weight: bold;
 }
