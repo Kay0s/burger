@@ -52,7 +52,7 @@ database is accessed.
 
 - \*[Deployed website](https://protected-lowlands-49340.herokuapp.com/)
 - \*[Portfolio](https://kay0s.github.io/Dynamic-Portfolio/portfolio.html)
-- \*[GitHub Repository](https://github.com/Kay0s/burger)
+- \*[GitHub Repository](https://github.com/Kay0s/burger) ![Screenshot of Eat That Burger App](./EatThatBurger.png)
 
 ### Screenshot of Homemade ORM Code
 
